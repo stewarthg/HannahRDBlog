@@ -1,1 +1,129 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hannah's Dietitian Blog</title>
+  <style>
+    /* Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+      overflow-x: hidden;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 5rem;
+      background: linear-gradient(120deg, #a8e063, #56ab2f);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: fadeIn 2s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
+      animation: fadeIn 3s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Floating food animations */
+    .food {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      opacity: 0.7;        /* more visible now */
+      animation: float 6s infinite ease-in-out;
+      z-index: 0;          /* stay behind text */
+    }
+
+    /* Positioned further out so they don’t overlap text */
+    .apple { top: 15%; left: 5%; animation-delay: 0s; }
+    .carrot { top: 15%; right: 8%; animation-delay: 1s; }
+    .banana { bottom: 10%; left: 10%; animation-delay: 2s; }
+    .broccoli { bottom: 15%; right: 15%; animation-delay: 3s; }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-25px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    section {
+      margin: 2rem 0;
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      animation: fadeIn 2s ease;
+    }
+
+    section h2 {
+      color: #56ab2f;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f4f4f4;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🥗 Hannah's Dietitian Blog</h1>
+    <p>Nutrition • Wellness • Healthy Living</p>
+
+    <!-- Food animations -->
+    <img src="https://cdn-icons-png.flaticon.com/512/415/415682.png" alt="Apple" class="food apple">
+    <img src="https://cdn-icons-png.flaticon.com/512/135/135620.png" alt="Carrot" class="food carrot">
+    <img src="https://cdn-icons-png.flaticon.com/512/415/415733.png" alt="Banana" class="food banana">
+    <img src="https://cdn-icons-png.flaticon.com/512/415/415746.png" alt="Broccoli" class="food broccoli">
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome!</h2>
+      <p>Hi, I’m Hannah 👋, a registered dietitian passionate about helping people live healthier, balanced lives. This blog is where I share simple nutrition tips, healthy recipes, and insights into building sustainable habits around food.</p>
+    </section>
+
+    <section>
+      <h2>About This Blog</h2>
+      <p>Here you’ll find practical guides on eating well, managing dietary restrictions, and discovering the joy in mindful eating. Whether you’re looking to improve your daily nutrition, learn new recipes, or understand the science behind food — you’re in the right place!</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Hannah's Dietitian Blog • Eat Well, Live Well 🌱
+  </footer>
+</body>
+</html>
