@@ -1,0 +1,138 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  overflow-x: hidden;
+  color: #333;
+}
+
+/* ---------------- NAV BAR ---------------- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #56ab2f;
+  transform: scale(1.1);
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  text-align: center;
+  padding: 3rem 1rem 5rem;
+  background: linear-gradient(120deg, #a8e063, #56ab2f);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  animation: fadeIn 2s ease;
+  position: relative;
+  z-index: 2;
+
+  /* Solid white with shadow */
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+}
+
+header p {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0;
+  animation: fadeIn 3s ease;
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+/* ---------------- ANIMATED FOODS ---------------- */
+.food {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  opacity: 0.8;
+  animation: float 6s infinite ease-in-out, rotate 12s infinite linear;
+  z-index: 0;
+}
+
+.apple { top: 15%; left: 5%; }
+.carrot { top: 15%; right: 8%; }
+.banana { bottom: 10%; left: 10%; }
+.broccoli { bottom: 15%; right: 15%; }
+.strawberry { top: 60%; left: 40%; }
+.avocado { bottom: 20%; right: 40%; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- MAIN ---------------- */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+section {
+  margin: 2rem 0;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 2s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(86,171,47,0.3);
+}
+
+section h2 {
+  color: #56ab2f;
+  margin-bottom: 1rem;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f4f4f4;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
